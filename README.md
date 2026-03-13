@@ -12,7 +12,7 @@ This project showcases a clean UI design for a restaurant or cafe website with i
 
 #  Live Demo
 
-🔗 https://mkaran2025.github.io/food-cafe-website/
+🔗 https://food-cafe-websi.netlify.app/
 
 ---
 
