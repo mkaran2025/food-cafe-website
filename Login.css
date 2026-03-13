@@ -1,0 +1,319 @@
+/* ===== Login Section ===== */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #ffece0, #fff3e0);
+  padding: 20px;
+}
+
+.login-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-container input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.login-container .login-btn {
+  padding: 12px;
+  background: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-container .login-btn:hover {
+  background: #cf6d17;
+}
+
+.login-container .forgot-password {
+  display: block;
+  margin-top: 10px;
+  color: #e67e22;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.login-container .forgot-password:hover {
+  text-decoration: underline;
+}
+
+.create-account {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+.create-account a.signup-link {
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.create-account a.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+}
+
+
+
+
+/* =========================
+   Forgot Password Section
+========================== */
+#forgot-password {
+  height: 100vh;
+  background: linear-gradient(to right, #ffece0, #fff3e0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Wrapper */
+.forgot-password-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* Container */
+.forgot-password-container {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Heading */
+.forgot-password-container h2 {
+  margin-bottom: 15px;
+  color: #3e2723;
+  font-weight: 600;
+}
+
+/* Paragraph */
+.forgot-password-container p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Input */
+.forgot-password-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.forgot-password-container input:focus {
+  border-color: #e67e22;
+  box-shadow: 0 0 5px rgba(62, 39, 35, 0.3);
+}
+
+/* Button */
+.reset-btn {
+  width: 100%;
+  padding: 12px;
+  background: #e67e22;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.reset-btn:hover {
+  background: #e67e22
+}
+
+/* Back to Login */
+.back-to-login {
+  margin-top: 20px;
+}
+
+.back-to-login p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.back-to-login a {
+  text-decoration: none;
+  color: #3e2723;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.back-to-login a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Sign Up Section */
+
+#signup-section {
+  height: 100vh;
+  background: linear-gradient(to right, #ffece0, #fff3e0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container */
+.signup-container {
+  background: #ffffff;
+  padding: 20px 20px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Heading */
+.signup-container h2 {
+  margin-bottom: 25px;
+  color: #3e2723;
+  font-weight: 600;
+}
+
+/* Inputs */
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.signup-container input:focus {
+  border-color: #3e2723;
+  box-shadow: 0 0 5px rgba(62, 39, 35, 0.3);
+}
+
+/* Checkbox */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.checkbox input {
+  margin-top: 3px;
+}
+
+.checkbox a {
+  color: #3e2723;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.checkbox a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+.signup-container button {
+  width: 100%;
+  padding: 12px;
+  background: #e67e22;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+/* OR Divider */
+.or {
+  margin: 20px 0;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Google Button */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.google-btn img {
+  width: 18px;
+}
+
+.google-btn:hover {
+  background: #f5f5f5;
+}
+
+/* Login Link */
+.login-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #3e2723;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

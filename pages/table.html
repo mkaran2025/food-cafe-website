@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../Styles.css">
+  <link rel="stylesheet" href="../Booktable.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script defer src="../Script.js"></script>
+
+</head>
+
+<body>
+  <!-- 🌟 Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="../index.html">
+          <img src="/image/home/logo-png.jpg" alt="Coffee Logo">
+          <span>Coffee</span>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="table.html" class="highlight-link">Book a Table</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="login-btn">Login</a></li>
+
+        <!-- 🛒 Cart Icon -->
+        <li>
+          <a href="javascript:void(0)" onclick="toggleCart()" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Toggle -->
+      <div class="menu-toggle" id="menuToggleBtn" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Updated reservation-section HTML (with class names) -->
+  <section class="reservation-section">
+    <div class="image-container">
+      <!-- <img src="https://vedio.mp4" alt="Couple Dining"> -->
+      <video autoplay muted loop playsinline>
+        <source src="/image/vedio.mp4">
+      </video>
+      <!--  -->
+    </div>
+
+    <div class="form-container">
+      <h4>Reservation</h4>
+      <h2>Book A Table Online</h2>
+      <form id="reservationForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Your Phone Number" required />
+        <input type="datetime-local" name="datetime" required />
+        <select name="guests" required>
+          <option value="1">People 1</option>
+          <option value="2">People 2</option>
+          <option value="3">People 3</option>
+          <option value="4">People 4</option>
+          <option value="5">People 5</option>
+          <option value="6">People 6</option>
+          <option value="7">People 7</option>
+          <option value="8">People 8</option>
+          <option value="9">People 9</option>
+          <option value="10">People 10</option>
+        </select>
+        <textarea name="request" placeholder="Special Request" rows="4"></textarea>
+        <button type="submit">BOOK NOW</button>
+      </form>
+    </div>
+  </section>
+
+
+
+
+  <!-- footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Branding -->
+      <div class="footer-section footer-branding">
+        <img src="/image/home/logo-png.jpg" alt="Food Cafe Logo">
+        <h3>Food Cafe</h3>
+        <p>Serving delicious meals with love. Fresh ingredients, cozy ambiance, and unforgettable taste.</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-section footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Delhi, India</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ info@foodcafe.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Food Cafe | All Rights Reserved
+    </div>
+  </footer>
+
+</body>
+
+</html>

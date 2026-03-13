@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop</title>
+  <link rel="stylesheet" href="../Styles.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+
+  <script defer src="../Script.js"></script>
+</head>
+
+<body>
+
+  <!-- 🌟 Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="../index.html">
+          <img src="/image/home/logo-png.jpg" alt="Coffee Logo">
+          <span>Coffee</span>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="table.html" class="highlight-link">Book a Table</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="login-btn">Login</a></li>
+
+        <!-- 🛒 Cart Icon -->
+        <li>
+          <a href="javascript:void(0)" onclick="toggleCart()" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" style="display: none;">0</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Toggle -->
+      <div class="menu-toggle" id="menuToggleBtn" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+    </div>
+  </nav>
+
+
+
+  <!-- Cart Sidebar -->
+  <aside id="cart-sidebar" class="cart-sidebar">
+    <h2 class="cart-title">Your Cart</h2>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-total-bar">
+      Total: Rs <span id="cart-total">0.00</span>
+    </div>
+
+    <div class="cart-buttons">
+      <button onclick="toggleCart()">Close</button>
+      <button class="checkout-btn">Check out</button>
+    </div>
+  </aside>
+
+
+
+  <!-- Our Menu Section 2 add to cart-->
+  <section id="menu-page">
+    <h2>OUR MENU</h2>
+    <div class="menu-grid">
+
+      <!-- Hot Beverages -->
+      <div class="menu-item">
+        <img src="../image/menu/Hot Beverages h1.png" alt="Hot Beverages">
+        <h3>Hot Beverages</h3>
+        <p>Wide range of steaming hot coffee to make you fresh and light.</p>
+        <p class="price">Rs 100</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Hot Beverages', 100, '../image/menu/Hot Beverages h1.png')">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Cold Beverages -->
+      <div class="menu-item">
+        <img src="../image/menu/h2.png" alt="Cold Beverages">
+        <h3>Cold Beverages</h3>
+        <p>Creamy and frothy cold coffee to make you cool.</p>
+        <p class="price">Rs 120</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Cold Beverages', 120, '../image/menu/h2.png')">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Refreshment -->
+      <div class="menu-item">
+        <img src="../image/menu/Refreshment h3.png" alt="Refreshment">
+        <h3>Refreshment</h3>
+        <p>Fruit and icy refreshing drinks to make you feel refreshed.</p>
+        <p class="price">Rs 110</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Refreshment', 110, '../image/menu/Refreshment h3.png')">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Special Combos -->
+      <div class="menu-item">
+        <img src="../image/menu/Special Combos h4.png " alt="Special Combos">
+        <h3>Special Combos</h3>
+        <p>Your favorite eating and drinking combinations.</p>
+        <p class="price">Rs 180</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Special Combos', 180, '../image/menu/Special Combos h4.png')">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Dessert -->
+      <div class="menu-item">
+        <img src="../image/menu/Dessert h5.png" alt="Dessert">
+        <h3>Dessert</h3>
+        <p>Satiate your palate and take yourself on a culinary treat.</p>
+        <p class="price">Rs 90</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Dessert', 90, '../image/menu/Dessert h5.png')">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Burger & French Fries -->
+      <div class="menu-item">
+        <img src="../image/menu/Burger & French Fries h6.png" alt="Burger & French Fries">
+        <h3>Burger & French Fries</h3>
+        <p>Quick bites to satisfy your small size hunger.</p>
+        <p class="price">Rs 150</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Burger & French Fries', 150, '../image/menu/Burger & French Fries h6.png')">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Pizza -->
+      <div class="menu-item">
+        <img src="../image/menu/h7.avif" alt="Pizza">
+        <h3>Pizza</h3>
+        <p>Hot, cheesy, and loaded with toppings you love.</p>
+        <p class="price">Rs 200</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Pizza', 200, '../image/menu/h7.avif')">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Pasta -->
+      <div class="menu-item">
+        <img src="../image/menu/h8.avif" alt="Pasta">
+        <h3>Pasta</h3>
+        <p>Creamy Alfredo or classic red sauce pasta bowls.</p>
+        <p class="price">Rs 170</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Pasta', 170, '../image/menu/h8.avif')">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Smoothies -->
+      <div class="menu-item">
+        <img src="../image/menu/h9.avif" alt="Smoothies">
+        <h3>Smoothies</h3>
+        <p>Fruity blends packed with flavor and nutrition.</p>
+        <p class="price">Rs 130</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Smoothies', 130, '../image/menu/h9.avif')">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Sandwich -->
+      <div class="menu-item">
+        <img src="../image/menu/h10.avif" alt="Sandwich">
+        <h3>Sandwich</h3>
+        <p>Freshly made sandwiches with tasty fillings.</p>
+        <p class="price">Rs 110</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Sandwich', 110, '../image/menu/h10.avif')">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Specialty Tea -->
+      <div class="menu-item">
+        <img src="../image/menu/h11.avif" alt="Specialty Tea">
+        <h3>Specialty Tea</h3>
+        <p>Soothing and aromatic teas for every mood.</p>
+        <p class="price">Rs 95</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Specialty Tea', 95, '../image/menu/h11.avif')">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Muffin -->
+      <div class="menu-item">
+        <img src="../image/menu/h12.avif" alt="Muffin">
+        <h3>Muffin</h3>
+        <p>Soft, sweet muffins perfect for any time snack.</p>
+        <p class="price">Rs 85</p>
+        <button class="add-to-cart-btn" onclick="addToCart('Muffin', 85, '../image/menu/h12.avif')">
+          Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Meal Categories Section -->
+  <section id="meal-categories" style="padding: 50px; text-align: center; background-color: #fefefe;">
+    <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 40px;">Meal Categories</h2>
+
+    <div class="meal-grid" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+
+      <!-- Breakfast -->
+      <div class="meal-box"
+        style="width: 250px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="../image/menu/Breakfast.avif" alt="Breakfast" style="width: 100%; border-radius: 10px;">
+        <h3 style="margin-top: 15px; font-size: 1.3rem;">Breakfast</h3>
+        <p>Start your day with energy-packed, delicious meals.</p>
+        <a href="meal.html"
+          style="display: inline-block; margin-top: 10px; padding: 8px 16px; background-color: #ff7b54; color: white; border-radius: 6px; text-decoration: none;">View
+          More</a>
+      </div>
+
+      <!-- Lunch -->
+      <div class="meal-box"
+        style="width: 250px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="../image/menu/Lunch7.jpg" alt="Lunch" style="width: 100%; border-radius: 10px;">
+        <h3 style="margin-top: 15px; font-size: 1.3rem;">Lunch</h3>
+        <p>Midday hunger saviors with complete nutrition.</p>
+        <a href="meal.html"
+          style="display: inline-block; margin-top: 10px; padding: 8px 16px; background-color: #2c9c68; color: white; border-radius: 6px; text-decoration: none;">View
+          More</a>
+      </div>
+
+      <!-- Dinner -->
+      <div class="meal-box"
+        style="width: 250px; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="../image/menu/dinner-1.jpg" alt="Dinner" style="width: 100%; border-radius: 10px;">
+        <h3 style="margin-top: 15px; font-size: 1.3rem;">Dinner</h3>
+        <p>Relax and refuel with our hearty dinner options.</p>
+        <a href="meal.html"
+          style="display: inline-block; margin-top: 10px; padding: 8px 16px; background-color: #1e3a8a; color: white; border-radius: 6px; text-decoration: none;">View
+          More</a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- Chef Section -->
+  <section class="chef-section" style="text-align: center; padding: 50px;">
+    <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 40px;">Chef</h2>
+    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+
+      <div class="chef-profile">
+        <img src="../image/menu/chef1.jpg" alt="Chef Muddsar Qayyum"
+          style="width: 200px; height: auto; border-radius: 8px;">
+        <p style="margin-top: 10px; font-weight: 500;">Muddsar Qayyum</p>
+      </div>
+
+      <div class="chef-profile">
+        <img src="../image/menu/chef2.jpg" alt="Chef Muddsar Qayyum"
+          style="width: 200px; height: auto; border-radius: 8px;">
+        <p style="margin-top: 10px; font-weight: 500;">Muddsar Qayyum</p>
+      </div>
+
+      <div class="chef-profile">
+        <img src="../image/menu/chef3.jpg" alt="Chef Muddsar Qayyum"
+          style="width: 200px; height: auto; border-radius: 8px;">
+        <p style="margin-top: 10px; font-weight: 500;">Muddsar Qayyum</p>
+      </div>
+
+      <div class="chef-profile">
+        <img src="../image/menu/chef-4.jpg" alt="Chef Muddsar Qayyum"
+          style="width: 200px; height: auto; border-radius: 8px;">
+        <p style="margin-top: 10px; font-weight: 500;">Muddsar Qayyum</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Branding -->
+      <div class="footer-section footer-branding">
+        <img src="/image/home/logo-png.jpg" alt="Food Cafe Logo">
+        <h3>Food Cafe</h3>
+        <p>Serving delicious meals with love. Fresh ingredients, cozy ambiance, and unforgettable taste.</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-section footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Delhi, India</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ info@foodcafe.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Food Cafe | All Rights Reserved
+    </div>
+  </footer>
+
+</body>
+
+</html>

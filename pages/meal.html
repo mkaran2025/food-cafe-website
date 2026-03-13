@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../Styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script defer src="../Script.js"></script>
+
+</head>
+
+<body>
+
+  <!-- 🌟 Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../image/home/logo-png.jpg" alt="Coffee Logo">
+          <span>Coffee</span>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="table.html" class="highlight-link">Book a Table</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="login-btn">Login</a></li>
+
+        <!-- 🛒 Cart Icon -->
+        <li>
+          <a href="javascript:void(0)" onclick="toggleCart()" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Toggle -->
+      <div class="menu-toggle" id="menuToggleBtn" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Cart Sidebar -->
+  <aside id="cart-sidebar" class="cart-sidebar">
+    <h2 class="cart-title">Your Cart</h2>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-total-bar">
+      Total: $<span id="cart-total">0.00</span>
+    </div>
+
+    <div class="cart-buttons">
+      <button onclick="toggleCart()">Close</button>
+      <button class="checkout-btn">Check out</button>
+    </div>
+  </aside>
+
+
+
+
+
+  <!-- 🍳 Breakfast Add-ons -->
+  <section id="breakfast-addons">
+    <h2>Breakfast Add-ons</h2>
+    <div class="meal-container">
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/Breakfast1.jpg" alt="Pancakes" />
+        <h3>Pancakes Stack</h3>
+        <p>Fluffy pancakes topped with syrup & berries.</p>
+        <p class="price">Rs 100</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Pancakes Stack', 100, '../image/menu/Meal Categories/Breakfast1.jpg')">Add to
+          Cart</button>
+      </div>
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/breakfast2.jpg" alt="Omelette" />
+        <h3>Cheese Omelette</h3>
+        <p>Fresh eggs folded with cheese and veggies.</p>
+        <p class="price">Rs 49</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Cheese Omelette', 49, '../image/menu/Meal Categories/breakfast2.jpg')">Add to
+          Cart</button>
+      </div>
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/breakfast3.jpg" alt="Avocado Toast" />
+        <h3>Avocado Toast</h3>
+        <p>Crunchy sourdough with smashed avocado.</p>
+        <p class="price">Rs 100</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Avocado Toast', 100, '../image/menu/Meal Categories/breakfast3.jpg')">Add to Cart</button>
+      </div>
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/breakfast4.jpg" alt="Fruit Bowl" />
+        <h3>Fruit Bowl</h3>
+        <p>Assorted seasonal fruits with honey drizzle.</p>
+        <p class="price">Rs 100</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Fruit Bowl', 100, '../image/menu/Meal Categories/breakfast4.jpg')">Add to Cart</button>
+      </div>
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/breakfast5.jpg" alt="French Toast" />
+        <h3>French Toast</h3>
+        <p>Golden-brown slices with cinnamon and maple.</p>
+        <p class="price">Rs 100</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('French Toast', 100, '../image/menu/Meal Categories/breakfast5.jpg')">Add to Cart</button>
+      </div>
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/breakfast6.jpg" alt="Breakfast Burrito" />
+        <h3>Breakfast Burrito</h3>
+        <p>Stuffed with eggs, cheese, sausage, and salsa.</p>
+        <p class="price">Rs 100</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Breakfast Burrito', 100, '../image/menu/Meal Categories/breakfast6.jpg')">Add to
+          Cart</button>
+      </div>
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/breakfast7.jpg" alt="Yogurt Parfait" />
+        <h3>Yogurt Parfait</h3>
+        <p>Layers of creamy yogurt, granola, and berries.</p>
+        <p class="price">Rs 100</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Yogurt Parfait', 100, '../image/menu/Meal Categories/breakfast7.jpg')">Add to
+          Cart</button>
+      </div>
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/breakfast8.jpg" alt="Bagel" />
+        <h3>Bagel & Cream Cheese</h3>
+        <p>Toasted bagel served with fresh cream cheese.</p>
+        <p class="price">Rs 100</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Bagel & Cream Cheese', 100, '../image/menu/Meal Categories/breakfast8.jpg')">Add to
+          Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- 🥗 Lunch Add-ons -->
+  <section id="lunch-addons">
+    <h2>Lunch Add-ons</h2>
+    <div class="meal-container">
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/lunch1.jpg" alt="Grilled Chicken Wrap" />
+        <h3>Grilled Chicken Wrap</h3>
+        <p>Stuffed with lettuce, tomato & garlic sauce.</p>
+        <p class="price">Rs 99</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Grilled Chicken Wrap', 99, '../image/menu/Meal Categories/lunch1.jpg')">Add to
+          Cart</button>
+      </div>
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/lunch2.jpg" alt="Veggie Bowl" />
+        <h3>Veggie Bowl</h3>
+        <p>Brown rice, beans, veggies, and avocado.</p>
+        <p class="price">Rs 99</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Veggie Bowl', 99, '../image/menu/Meal Categories/lunch2.jpg')">Add to Cart</button>
+      </div>
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/lunch3.jpg" alt="Pasta Primavera" />
+        <h3>Pasta Primavera</h3>
+        <p>Penne pasta with seasonal veggies & herbs.</p>
+        <p class="price">Rs 99</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Pasta Primavera', 99, '../image/menu/Meal Categories/lunch3.jpg')">Add to Cart</button>
+      </div>
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/lunch4.jpg" alt="Caesar Salad" />
+        <h3>Caesar Salad</h3>
+        <p>Romaine lettuce, croutons, and parmesan.</p>
+        <p class="price">Rs 99</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Caesar Salad', 99, '../image/menu/Meal Categories/lunch4.jpg')">Add to Cart</button>
+      </div>
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/lunch5.jpg" alt="Club Sandwich" />
+        <h3>Club Sandwich</h3>
+        <p>Triple-decker sandwich with chicken & bacon.</p>
+        <p class="price">Rs 99</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Club Sandwich', 99, '../image/menu/Meal Categories/lunch5.jpg')">Add to Cart</button>
+      </div>
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/lunch6.jpg" alt="Egg Fried Rice" />
+        <h3>Egg Fried Rice</h3>
+        <p>Fried rice with eggs and veggies.</p>
+        <p class="price">Rs 99</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Egg Fried Rice', 99, '../image/menu/Meal Categories/lunch6.jpg')">Add to Cart</button>
+      </div>
+
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/lunch1.jpg" alt="BBQ Chicken Pizza" />
+        <h3>BBQ Chicken Pizza</h3>
+        <p>Thin crust pizza topped with BBQ chicken & cheese.</p>
+        <p class="price">Rs 99</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('BBQ Chicken Pizza', 99, '../image/menu/Meal Categories/lunch1.jpg')">Add to Cart</button>
+      </div>
+
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/lunch2.jpg" alt="Beef Burger" />
+        <h3>Beef Burger</h3>
+        <p>Juicy beef patty with lettuce, tomato & cheese.</p>
+        <p class="price">Rs 99</p>
+        <button class="add-to-cart-btn"
+          onclick="addToCart('Beef Burger', 99, '../image/menu/Meal Categories/lunch2.jpg')">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- 🍽️ Dinner Add-ons -->
+  <section id="dinner-addons">
+    <h2>Dinner Add-ons</h2>
+
+    <div class="meal-container">
+
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/dinner1.jpg" alt="Butter Chicken">
+        <div class="meal-content">
+          <h3>Butter Chicken</h3>
+          <p>Rich and creamy tomato-based curry with tender chicken.</p>
+          <p class="price">Rs 100</p>
+          <button class="add-to-cart-btn"
+            onclick="addToCart('Butter Chicken', 100, '../image/menu/Meal Categories/dinner1.jpg')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/dinner-2.jpg" alt="Palak Paneer">
+        <div class="meal-content">
+          <h3>Palak Paneer</h3>
+          <p>Spinach curry with soft cubes of paneer cheese.</p>
+          <p class="price">Rs 100</p>
+          <button class="add-to-cart-btn"
+            onclick="addToCart('Palak Paneer', 100, '../image/menu/Meal Categories/dinner-2.jpg')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/dinner3.jpg" alt="Chicken Biryani">
+        <div class="meal-content">
+          <h3>Chicken Biryani</h3>
+          <p>Fragrant basmati rice cooked with spiced chicken.</p>
+          <p class="price">Rs 100</p>
+          <button class="add-to-cart-btn"
+            onclick="addToCart('Chicken Biryani', 100, '../image/menu/Meal Categories/dinner3.jpg')">Add to
+            Cart</button>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/dinner4.jpg" alt="Vegetable Korma">
+        <div class="meal-content">
+          <h3>Vegetable Korma</h3>
+          <p>Mixed vegetables in a mild and creamy curry sauce.</p>
+          <p class="price">Rs 100</p>
+          <button class="add-to-cart-btn"
+            onclick="addToCart('Vegetable Korma', 100, '../image/menu/Meal Categories/dinner4.jpg')">Add to
+            Cart</button>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/dinner5.jpg" alt="Prawn Masala">
+        <div class="meal-content">
+          <h3>Prawn Masala</h3>
+          <p>Succulent prawns in a spiced tomato-onion gravy.</p>
+          <p class="price">Rs 100</p>
+          <button class="add-to-cart-btn"
+            onclick="addToCart('Prawn Masala', 100, '../image/menu/Meal Categories/dinner5.jpg')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/dinner6.jpg" alt="Paneer Tikka Masala">
+        <div class="meal-content">
+          <h3>Paneer Tikka Masala</h3>
+          <p>Chunks of paneer cooked in a rich and spicy tomato-based gravy.</p>
+          <p class="price">Rs 100</p>
+          <button class="add-to-cart-btn"
+            onclick="addToCart('Paneer Tikka Masala', 100, '../image/menu/Meal Categories/dinner6.jpg')">Add to
+            Cart</button>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/dinner1.jpg" alt="Lamb Rogan Josh">
+        <div class="meal-content">
+          <h3>Lamb Rogan Josh</h3>
+          <p>Tender lamb cooked slowly in aromatic Kashmiri spices.</p>
+          <p class="price">Rs 100</p>
+          <button class="add-to-cart-btn"
+            onclick="addToCart('Lamb Rogan Josh', 100, '../image/menu/Meal Categories/dinner1.jpg')">Add to
+            Cart</button>
+        </div>
+      </div>
+
+      <div class="meal-box">
+        <img src="../image/menu/Meal Categories/dinner-2.jpg" alt="Tandoori Chicken">
+        <div class="meal-content">
+          <h3>Tandoori Chicken</h3>
+          <p>Clay oven roasted chicken marinated in yogurt and spices.</p>
+          <p class="price">Rs 100</p>
+          <button class="add-to-cart-btn"
+            onclick="addToCart('Tandoori Chicken', 100, '../image/menu/Meal Categories/dinner-2.jpg')">Add to
+            Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Branding -->
+      <div class="footer-section footer-branding">
+        <img src="/image/home/logo-png.jpg" alt="Food Cafe Logo">
+        <h3>Food Cafe</h3>
+        <p>Serving delicious meals with love. Fresh ingredients, cozy ambiance, and unforgettable taste.</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-section footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Delhi, India</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ info@foodcafe.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Food Cafe | All Rights Reserved
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+
+  <script defer src="Script.js"></script>
+</head>
+
+<body>
+
+  <!-- 🌟 Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="/image/home/logo-png.jpg" alt="Coffee Logo">
+          <span>Coffee</span>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/About.html">About</a></li>
+        <li><a href="pages/Menu.html">Menu</a></li>
+        <li><a href="pages/Gallery.html">Gallery</a></li>
+        <li><a href="pages/Table.html" class="highlight-link">Book a Table</a></li>
+        <li><a href="pages/Contact.html">Contact</a></li>
+        <li><a href="pages/Login.html" class="login-btn">Login</a></li>
+
+        <!-- 🛒 Cart Icon -->
+        <li>
+          <a href="javascript:void(0)" onclick="toggleCart()" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Toggle -->
+      <div class="menu-toggle" id="menuToggleBtn" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+    </div>
+  </nav>
+
+
+
+
+
+
+
+  <!-- 🔥 Home Section -->
+  <section id="home">
+    <div class="home-container">
+      <div class="home-text">
+        <h3 class="highlight">Best Coffee</h3>
+        <h1>Make your day great with our special coffee!</h1>
+        <p>Welcome to our coffee paradise, where every bean tells a story and every cup sparks joy.</p>
+        <div class="buttons">
+          <a href="/pages/menu.html" class="btn order-btn">Order Now</a>
+          <a href="/pages/contact.html" class="btn contact-btn">Contact Us</a>
+        </div>
+      </div>
+      <div class="home-image">
+        <img src="image/home/Home.png" alt="Coffee Cup">
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 🔥 About Section -->
+  <section id="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="image/about/about-1.png" alt="People enjoying coffee">
+      </div>
+      <div class="about-text">
+        <h2>ABOUT US</h2>
+        <p>At Coffee House in Berndorf, Germany, we pride ourselves on being a
+          go-to destination for coffee lovers and conversation seekers alike.
+          We're dedicated to providing an exceptional coffee experience in a
+          cozy and inviting atmosphere, where guests can relax, unwind, and
+          enjoy their time in comfort.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- 🔥 Our Menu Section -->
+  <section id="home-menu">
+    <h2>OUR MENU</h2>
+
+    <div class="menu-grid">
+      <!-- Menu Items -->
+      <div class="menu-item">
+        <img src="image/menu/Hot Beverages h1.png" alt="Hot Beverages">
+        <h3>Hot Beverages</h3>
+        <p>Wide range of steaming hot coffee to make you fresh and light.</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="image/menu/h2.png" alt="Cold Beverages">
+        <h3>Cold Beverages</h3>
+        <p>Creamy and frothy cold coffee to make you cool.</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="image/menu/Refreshment h3.png" alt="Refreshment">
+        <h3>Refreshment</h3>
+        <p>Fruit and icy refreshing drinks to make you feel refreshed.</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="image/menu/Special Combos h4.png" alt="Special Combos">
+        <h3>Special Combos</h3>
+        <p>Your favorite eating and drinking combinations.</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="image/menu/Dessert h5.png" alt="Dessert">
+        <h3>Dessert</h3>
+        <p>Satiate your palate and take yourself on a culinary treat.</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="image/menu/Burger & French Fries h6.png" alt="Burger & French Fries">
+        <h3>Burger & French Fries</h3>
+        <p>Quick bites to satisfy your small size hunger.</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="image/menu/h7.avif" alt="Pizza">
+        <h3>Pizza</h3>
+        <p>Hot, cheesy, and loaded with toppings you love.</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="image/menu/h8.avif" alt="Pasta">
+        <h3>Pasta</h3>
+        <p>Creamy Alfredo or classic red sauce pasta bowls.</p>
+      </div>
+
+
+
+      <!-- See More Button -->
+      <div class="menu-btn-container">
+        <a href="pages/menu.html" class="menu-btn">See More</a>
+      </div>
+  </section>
+
+
+  <!--testimonials section-->
+  <section id="testimonials" class="testimonials-section">
+    <h2>TESTIMONIALS</h2>
+    <div class="testimonials-container">
+      <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+
+      <div class="testimonials-slider">
+        <div class="testimonial-item">
+          <img src="/image/home/k1.jpg" alt="James Wilson" />
+          <h3>James Wilson</h3>
+          <p>"Great espresso blend! Smooth and bold flavor. Fast shipping too!"</p>
+        </div>
+        <div class="testimonial-item">
+          <img src="/image/home/k2.jpg" alt="Michael Brown" />
+          <h3>Michael Brown</h3>
+          <p>"Fantastic mocha flavor. Fresh and aromatic. Quick shipping!"</p>
+        </div>
+        <div class="testimonial-item">
+          <img src="/image/home/k3.jpg" alt="Emily Harris" />
+          <h3>Emily Harris</h3>
+          <p>"Excellent quality! Fresh beans and quick delivery. Highly recommend."</p>
+        </div>
+        <div class="testimonial-item">
+          <img src="/image/home/k4.jpg" alt="Sarah Johnson" />
+          <h3>Sarah Johnson</h3>
+          <p>"Loved the French roast. Perfectly balanced and rich. Will order again!"</p>
+        </div>
+        <div class="testimonial-item">
+          <img src="/image/home/k5.jpg" alt="Anthony Thompson" />
+          <h3>Anthony Thompson</h3>
+          <p>"Best decaf I've tried! Smooth and flavorful. Arrived promptly!"</p>
+        </div>
+      </div>
+
+      <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+
+
+  <!-- gallery section -->
+  <section id="gallery" class="gallery-section">
+    <h2>GALLERY</h2>
+    <div class="gallery-container">
+
+      <div class="gallery-item">
+        <img src="../image/GALLERY/Gallery1.jpg" alt="Coffee Cup">
+      </div>
+
+      <div class="gallery-item">
+        <img src="../image/GALLERY/Gallery2.jpg" alt="Breakfast Plate">
+      </div>
+
+      <div class="gallery-item">
+        <img src="../image/GALLERY/Gallery3.jpg" alt="Smoothies & Fruits">
+      </div>
+
+      <div class="gallery-item">
+        <img src="../image/GALLERY/Gallery4.jpg" alt="Tea & Salad">
+      </div>
+
+      <div class="gallery-item">
+        <img src="../image/GALLERY/Gallery5.jpg" alt="Mexican Dish">
+      </div>
+
+      <div class="gallery-item">
+        <img src="../image/GALLERY/Gallery6.jpg" alt="Honey & Coffee">
+      </div>
+
+      <div class="gallery-item">
+        <img src="../image/GALLERY/Gallery7.jpg" alt="Espresso Shot">
+      </div>
+
+      <div class="gallery-item">
+        <img src="../image/GALLERY/Gallery8.jpg" alt="Pastries">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- contact section -->
+  <section class="contact-section">
+    <div class="container">
+
+      <!-- 📞 Contact Info -->
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p><strong>Email:</strong> contact@example.com</p>
+        <p><strong>Phone:</strong> +91 0123456789</p>
+        <p><strong>Address:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+
+      <!-- 📨 Contact Form -->
+      <div class="contact-form">
+
+        <form id="contactForm">
+
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+          <button type="submit">Send Message</button>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Branding -->
+      <div class="footer-section footer-branding">
+        <img src="image/home/logo-png.jpg" alt="Food Cafe Logo">
+        <h3>Food Cafe</h3>
+        <p>Serving delicious meals with love. Fresh ingredients, cozy ambiance, and unforgettable taste.</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-section footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Delhi, India</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ info@foodcafe.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Food Cafe | All Rights Reserved
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>

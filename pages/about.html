@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop</title>
+  <link rel="stylesheet" href="../Styles.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+
+  <script defer src="../Script.js"></script>
+</head>
+
+<body>
+
+  <!-- 🌟 Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <div class="logo">
+        <a href="../index.html">
+          <img src="/image/home/logo-png.jpg" alt="Coffee Logo">
+          <span>Coffee</span>
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="table.html" class="highlight-link">Book a Table</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="login-btn">Login</a></li>
+
+        <!-- 🛒 Cart Icon -->
+        <li>
+          <a href="javascript:void(0)" onclick="toggleCart()" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Toggle -->
+      <div class="menu-toggle" id="menuToggleBtn" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+    </div>
+  </nav>
+
+
+
+
+  <!-- 🔥 About Section -->
+  <section id="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="/image/about/about-1.png" alt="People enjoying coffee">
+      </div>
+      <div class="about-text">
+        <h2>ABOUT US</h2>
+        <p>At Coffee House in Berndorf, Germany, we pride ourselves on being a
+          go-to destination for coffee lovers and conversation seekers alike.
+          We're dedicated to providing an exceptional coffee experience in a
+          cozy and inviting atmosphere, where guests can relax, unwind, and
+          enjoy their time in comfort.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- 🔥 Services Section -->
+  <section id="services" class="py-16 bg-gray-50">
+    <div class="services-container max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-12">OUR SERVICES</h2>
+      <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+        <!-- Service 1 -->
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <i class="fas fa-mug-hot text-4xl text-brown-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Freshly Brewed Coffee</h3>
+          <p class="text-gray-600">We serve premium blends roasted to perfection for every cup.</p>
+        </div>
+        <!-- Service 2 -->
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <i class="fas fa-cookie text-4xl text-yellow-500 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Bakery Treats</h3>
+          <p class="text-gray-600">Enjoy handmade pastries, muffins, and croissants baked daily.</p>
+        </div>
+        <!-- Service 3 -->
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <i class="fas fa-wifi text-4xl text-blue-500 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Free Wi-Fi</h3>
+          <p class="text-gray-600">Work, relax, or connect with friends over our fast and free Wi-Fi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Branding -->
+      <div class="footer-section footer-branding">
+        <img src="/image/home/logo-png.jpg" alt="Food Cafe Logo">
+        <h3>Food Cafe</h3>
+        <p>Serving delicious meals with love. Fresh ingredients, cozy ambiance, and unforgettable taste.</p>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-section footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Delhi, India</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ info@foodcafe.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Food Cafe | All Rights Reserved
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>
