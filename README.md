@@ -32,7 +32,7 @@ Example:
 
 ---
 
-# ✨ Features
+#  Features
 
 * Responsive Navigation Bar
 * Hero Section
@@ -46,7 +46,7 @@ Example:
 
 ---
 
-# 🛠️ Technologies Used
+#  Technologies Used
 
 * HTML5
 * CSS3
@@ -55,7 +55,7 @@ Example:
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```
 food-cafe-website
@@ -76,7 +76,7 @@ food-cafe-website
 
 ---
 
-# 🎯 Project Purpose
+#  Project Purpose
 
 The purpose of this project is to practice **Front-End Web Development** by building a real-world **Cafe / Restaurant website UI** with modern layout and responsive design.
 
